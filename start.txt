@@ -1,1 +1,0 @@
-This repo is helpful for installing Node.js and NPM on WSL: https://github.com/nodesource/distributions
