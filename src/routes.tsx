@@ -1,7 +1,8 @@
 
-import React, { Suspense } from "react"
-import { Route, Outlet, createBrowserRouter, createRoutesFromElements } from "react-router-dom"
-import { Router } from "@remix-run/router"
+import React from "react";
+import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import { Router } from "@remix-run/router";
+import RouteOutlet from "./components/RouteOutlet/RouteOutlet";
 
 interface ToolboxRoutes {
   Home:   React.FunctionComponent;
@@ -13,7 +14,7 @@ function initBrowserRouter(routeElements: ToolboxRoutes): Router {
   const { Home, View } = routeElements;
 
   const routes = (
-    <Route path="/" element={ <Outlet /> }>
+    <Route path="/" element={ <RouteOutlet /> }>
       <Route index element={ <Home /> } />
       <Route path="view" element={ <View /> } />
     </Route>
