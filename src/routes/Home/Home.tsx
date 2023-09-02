@@ -1,20 +1,14 @@
 import { useRef, useState } from "react";
 import Card from "../../components/Card/Card";
 import styles from "./Home.module.css"
+import useFetchOnce from "../../hooks/useFetchOnce";
 
 function Home(): React.ReactElement {
 
-  // Ideally you'd want an Array<Tool> but time is not allowing for the
-  // definition of a full Tool interface.
-  const [tools, setTools] = useState<Array<any> | null>(null);
-  const hasMounted = useRef<boolean>(false);
-
-  if (hasMounted.current === false) {
-    hasMounted.current = true;
-    fetch(process.env.REACT_APP_SERVER_URL_PHP + "/GetAllTools.php").then((response) => {
-      response.json().then((data) => setTools(data));
-    });
-  }
+  const tools = useFetchOnce<Array<any>>(
+    process.env.REACT_APP_SERVER_URL_PHP + "/GetAllTools.php",
+    { method: "GET" }
+  );
 
   return (
     <div id={styles.cardFlexbox}>
