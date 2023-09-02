@@ -2,7 +2,7 @@
 
 .card {
   box-sizing: border-box;
-  padding: 1.5rem;
+  padding: 2em 1.5em;
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,.1);
   font-size: 1rem;
@@ -13,7 +13,8 @@
 
 .cardContentFlexbox {
   display: flex;
-  max-width: 18em;
+  align-items: center;
+  max-width: 25em;
   white-space: nowrap;
   overflow: hidden;
 }
