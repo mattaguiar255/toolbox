@@ -20,7 +20,7 @@ function Home(): React.ReactElement {
     <div id={styles.cardFlexbox}>
       { tools !== null && tools.map((tool) => (
           <Card 
-            key={tool.tool_id}
+            key={tool.tool_uuid}
             title={tool.title}
             img={tool.icon_link || undefined}
             shortDescription={tool.short_desc}
