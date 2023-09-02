@@ -12,7 +12,12 @@ function Home(): React.ReactElement {
 
   return (
     <div id={styles.cardFlexbox}>
-      <Card />
+      <Card
+        title="TypeScript"
+        img="https://pbs.twimg.com/profile_images/1648471227416346625/v84A9gXA_400x400.png"
+        shortDescription="JavaScript with Types"
+        linkURL="https://www.typescriptlang.org/"
+      />
     </div>
   );
 
