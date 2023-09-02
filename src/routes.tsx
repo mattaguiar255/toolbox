@@ -16,7 +16,7 @@ function initBrowserRouter(routeElements: ToolboxRoutes): Router {
   const routes = (
     <Route path="/" element={ <RouteOutlet /> }>
       <Route index element={ <Home /> } />
-      <Route path="view" element={ <View /> } />
+      <Route path="view/:toolId" element={ <View /> } />
     </Route>
   );
 
