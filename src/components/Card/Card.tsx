@@ -12,6 +12,8 @@ interface CardProps {
 
 function Card(props: CardProps): React.ReactElement {
 
+  console.log(props.img);
+
   return (
     <motion.div className={styles.card} whileHover={{ scale: 1.075 }}>
       <div className={styles.cardContentFlexbox}>

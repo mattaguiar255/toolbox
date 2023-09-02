@@ -18,14 +18,15 @@ function Home(): React.ReactElement {
 
   return (
     <div id={styles.cardFlexbox}>
-      { 
-        tools !== null &&
-        <Card
-          title={tools[1].title}
-          img={tools[1].icon_link}
-          shortDescription={tools[1].short_desc}
-          linkURL={tools[1].docs_link}
-        />
+      { tools !== null && tools.map((tool) => (
+          <Card 
+            key={tool.tool_id}
+            title={tool.title}
+            img={tool.icon_link || undefined}
+            shortDescription={tool.short_desc}
+            linkURL={tool.docs_link} 
+          />
+        ))
       }
     </div>
   );

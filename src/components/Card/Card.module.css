@@ -2,19 +2,19 @@
 
 .card {
   box-sizing: border-box;
-  padding: 2em 1.5em;
+  padding: 2.5em 1.5em;
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,.1);
   font-size: 1rem;
   font-family: "Inter";
   color: var(--soft-black);
   cursor: pointer;
+  margin-bottom: 1em;
 }
 
 .cardContentFlexbox {
   display: flex;
-  align-items: center;
-  max-width: 25em;
+  width: 23em;
   white-space: nowrap;
   overflow: hidden;
 }
