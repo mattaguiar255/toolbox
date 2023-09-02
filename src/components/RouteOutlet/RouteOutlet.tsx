@@ -1,11 +1,10 @@
 import { Outlet } from "react-router-dom";
+import AppHeader from "../AppHeader/AppHeader";
 
 function RouteOutlet(): React.ReactElement {
   return (
     <>
-      <header>
-        <h1>Toolbox</h1>
-      </header>
+      <AppHeader />
       <main>
         <Outlet />
       </main>
