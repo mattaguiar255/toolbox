@@ -1,3 +1,5 @@
+import Card from "../../components/Card/Card";
+import styles from "./Home.module.css"
 
 // This is a temporary fetch for testing the PHP backend.
 fetch(process.env.REACT_APP_SERVER_URL_PHP + "/GetAllTools.php").then((response) => {
@@ -7,7 +9,13 @@ fetch(process.env.REACT_APP_SERVER_URL_PHP + "/GetAllTools.php").then((response)
 });
 
 function Home(): React.ReactElement {
-  return <div>This is the home page.</div>;
+
+  return (
+    <div id={styles.cardFlexbox}>
+      <Card />
+    </div>
+  );
+
 }
 
 export default Home;

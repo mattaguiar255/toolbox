@@ -1,0 +1,49 @@
+
+
+.card {
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,.1);
+  font-size: 1rem;
+  font-family: "Inter";
+  color: var(--soft-black);
+  cursor: pointer;
+}
+
+.cardContentFlexbox {
+  display: flex;
+  max-width: 18em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cardImageContainer {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+.cardImage {
+  width: 5.5em;
+  height: 5.5em;
+  fill: var(--soft-black);
+  vertical-align: middle;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+.cardDescription, .cardLinkURL {
+  margin-top: 0.3rem;
+  font-size: 0.75em;
+}
+
+.cardLinkURL {
+  color: var(--mahogany);
+}
+
+.cardLinkURL:hover {
+  color: var(--mahogany-dark);
+}

@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 import initBrowserRouter from "./routes";
-import Home from "./routes/Home";
+import Home from "./routes/Home/Home";
 import View from "./routes/View";
 import "./styles/variables.css";
 import "./styles/font.css";
