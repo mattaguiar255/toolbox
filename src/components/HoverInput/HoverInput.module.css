@@ -1,0 +1,20 @@
+
+.hoverInput {
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: none;
+  border-radius: 0.25em;
+  padding: 0.75em;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--soft-box-shadow);
+  box-sizing: border-box;
+  outline: none;
+  transition: all 250ms ease;
+}
+
+.hoverInput:hover, .hoverInput:focus {
+  border-color: rgb(230, 230, 230);
+  box-shadow: var(--soft-box-shadow);
+}

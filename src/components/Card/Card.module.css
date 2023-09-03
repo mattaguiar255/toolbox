@@ -4,7 +4,7 @@
   box-sizing: border-box;
   padding: 2.5em 1.5em;
   border-radius: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,.1);
+  box-shadow: var(--soft-box-shadow);
   font-size: 1rem;
   font-family: "Inter";
   color: var(--soft-black);

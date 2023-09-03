@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import ToolForm from "../../components/ToolForm/ToolForm";
 import useFetchOnce from "../../hooks/useFetchOnce";
 import styles from "./View.module.css";
 
@@ -11,14 +12,11 @@ function View(): React.ReactElement {
     { method: "GET" }
   );
 
-  const tool = tools !== null ? tools[0] : null;
-
-  console.log(tools);
-
   return (
-    <form id={styles.view}>
-
-    </form>
+    <div id={styles.view}>
+      { tools?.length !== undefined && tools.length > 0 && <ToolForm tool={tools[0]} /> }
+      { tools?.length == 0 && <p id={styles.toolSearchFailed}>Could not find the specified tool.</p> }
+    </div>
   );
 
 }

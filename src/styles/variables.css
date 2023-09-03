@@ -1,6 +1,12 @@
 
 :root {
+
+  /* Colors */
   --soft-black: rgb(53, 53, 72);
   --mahogany: rgb(199, 92, 92);
   --mahogany-dark: rgb(117, 66, 66);
+
+  /* Box Shadows */
+  --soft-box-shadow: 0 0 15px rgba(0,0,0,.1);
+
 }
