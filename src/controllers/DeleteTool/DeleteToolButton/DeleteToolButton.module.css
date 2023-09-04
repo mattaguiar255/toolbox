@@ -1,0 +1,16 @@
+
+.deleteToolButton {
+  background-color: var(--mahogany);
+  width: 6em;
+  height: 6em;
+}
+
+.deleteToolButton:hover {
+  box-shadow: var(--mahogany-box-shadow);
+}
+
+.deleteToolButton > * {
+  width: 50%;
+  height: 50%;
+  fill: white;
+}

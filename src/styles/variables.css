@@ -13,5 +13,6 @@
   /* Box Shadows */
   --soft-box-shadow: 0 0 15px rgba(0,0,0,.1);
   --soft-green-box-shadow: 0 0 15px rgba(101, 147, 101, 0.5);
+  --mahogany-box-shadow: 0 0 15px rgba(199, 92, 92, 0.5);
 
 }
