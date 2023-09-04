@@ -1,0 +1,16 @@
+
+.createToolButton {
+  background-color: var(--soft-green);
+  width: 6em;
+  height: 6em;
+}
+
+.createToolButton:hover {
+  box-shadow: var(--soft-green-box-shadow);
+}
+
+.createToolButton > * {
+  width: 50%;
+  height: 50%;
+  fill: white;
+}
