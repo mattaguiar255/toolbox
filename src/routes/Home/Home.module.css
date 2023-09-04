@@ -5,3 +5,19 @@
   align-content: space-around;
   flex-wrap: wrap;
 }
+
+#newToolButton {
+  background-color: var(--soft-green);
+  width: 6em;
+  height: 6em;
+}
+
+#newToolButton:hover {
+  box-shadow: var(--soft-green-box-shadow);
+}
+
+#newToolButton > * {
+  width: 50%;
+  height: 50%;
+  fill: white;
+}

@@ -2,6 +2,7 @@ import UpdateToolInput from "../../controllers/UpdateTool/UpdateToolInput/Update
 import ToolFormLinksEditor from "../ToolFormLinksEditor/ToolFormLinksEditor";
 import ToolFormLinksEditorContext from "../ToolFormLinksEditorContext/ToolFormLinksEditorContext";
 import ToolFormSectionHeader from "../ToolFormSectionHeader/ToolFormSectionHeader";
+import DefaultHammerSVG from "../../images/ComponentSVGs/DefaultHammerSVG";
 import styles from "./ToolForm.module.css";
 
 interface ToolFormProps {
@@ -20,7 +21,8 @@ function ToolForm(props: ToolFormProps): React.ReactElement {
           defaultValue={props.tool.title}
           placeholder="Title"
         />
-        <img id={styles.toolImage} src={props.tool.icon_link} alt="Tool" />
+        { props.tool.icon_link && <img id={styles.toolImage} src={props.tool.icon_link} alt="Tool" /> }
+        { !props.tool.icon_link && <DefaultHammerSVG id={styles.toolImage} /> }
       </div>
       <div id={styles.formBody}>
         <div>
@@ -80,12 +82,13 @@ function ToolForm(props: ToolFormProps): React.ReactElement {
               toolId={props.tool.tool_uuid}
               links={
                 (() => {
-                  const linkIds = props.tool.link_ids.split(",");
-                  const linkNames = props.tool.link_names.split(",");
-                  const linkURLs = props.tool.links.split(",");
+                  const linkIds = props.tool.link_ids?.split(",");
+                  const linkNames = props.tool.link_names?.split(",");
+                  const linkURLs = props.tool.links?.split(",");
+                  if (linkIds === undefined) return [];
                   return (
                     linkIds.map((linkId: string, index: number) => (
-                      { linkId: linkId, linkName: linkNames[index], linkURL: linkURLs[index] }
+                      { linkId: linkId, linkName: linkNames?.[index], linkURL: linkURLs?.[index] }
                     ))
                   );
                 })()

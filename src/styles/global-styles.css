@@ -25,3 +25,25 @@
   border-radius: 50%;
   aspect-ratio: 1/1;
 }
+
+.circleButton {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 150ms linear;
+}
+
+.circleButton * {
+  vertical-align: middle;
+}
+
+.greenGlowOnHover:hover {
+  box-shadow: var(--soft-green-box-shadow);
+}
+
+.redGlowOnHover:hover {
+  box-shadow: red;
+}

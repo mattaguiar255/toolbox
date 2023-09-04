@@ -20,6 +20,7 @@
   width: 7em;
   height: 7em;
   margin-right: 1em;
+  fill: var(--soft-black);
 }
 
 .inputSection {
