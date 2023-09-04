@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import CardLink from "../../controllers/CardLink/CardLink";
-import styles from "./Home.module.css"
+import FixedPanel from "../../components/FixedPanel/FixedPanel";
 import useFetchOnce from "../../hooks/useFetchOnce";
+import styles from "./Home.module.css"
 
 function Home(): React.ReactElement {
 
@@ -11,18 +12,21 @@ function Home(): React.ReactElement {
   );
 
   return (
-    <div id={styles.cardFlexbox}>
-      { tools !== null && tools.map((tool) => (
-          <CardLink
-            key={tool.tool_uuid}
-            to={`/view/${tool.tool_uuid}`}
-            title={tool.title}
-            img={tool.icon_link || undefined}
-            shortDescription={tool.short_desc}
-            linkURL={tool.docs_link} 
-          />
-        ))
-      }
+    <div>
+      <div id={styles.cardFlexbox}>
+        { tools !== null && tools.map((tool) => (
+            <CardLink
+              key={tool.tool_uuid}
+              to={`/view/${tool.tool_uuid}`}
+              title={tool.title}
+              img={tool.icon_link || undefined}
+              shortDescription={tool.short_desc}
+              linkURL={tool.docs_link} 
+            />
+          ))
+        }
+      </div>
+      <FixedPanel position={{ bottom: "5%", right: "5%" }}>Fixed Panel</FixedPanel>
     </div>
   );
 
