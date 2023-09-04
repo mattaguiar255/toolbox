@@ -1,0 +1,27 @@
+
+.invisibleHoverableInput {
+
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: none;
+  border-radius: 0.25em;
+  padding: 0.75em;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--soft-box-shadow);
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow 250ms ease, border-color 250ms ease;
+
+}
+
+.invisibleHoverableInput:hover, .invisibleHoverableInput:focus {
+  border-color: rgb(230, 230, 230);
+  box-shadow: var(--soft-box-shadow);
+}
+
+.circleBackground {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}

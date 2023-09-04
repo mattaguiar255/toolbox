@@ -5,8 +5,13 @@
   --soft-black: rgb(53, 53, 72);
   --mahogany: rgb(199, 92, 92);
   --mahogany-dark: rgb(117, 66, 66);
+  --light-grey: rgb(240, 240, 240);
+  --danger-red: rgb(237, 32, 32);
+  --soft-red: rgb(255, 233, 233);
+  --soft-green: rgb(89, 178, 89);
 
   /* Box Shadows */
   --soft-box-shadow: 0 0 15px rgba(0,0,0,.1);
+  --soft-green-box-shadow: 0 0 15px rgba(89, 178, 89, 0.5);
 
 }

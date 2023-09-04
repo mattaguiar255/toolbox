@@ -1,0 +1,43 @@
+
+#formHeaderFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1em;
+}
+
+#formBody {
+  padding: 1em;
+}
+
+#toolTitle {
+  width: 33%;
+  font-size: 1.33em;
+  font-weight: 700;
+}
+
+#toolImage {
+  width: 7em;
+  height: 7em;
+  margin-right: 1em;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelAndInputContainer {
+  width: 75%;
+  margin-bottom: 1em;
+}
+
+.inputLabel {
+  font-size: 0.75em;
+  display: block;
+}
+
+.inputField {
+  width: 100%;
+}
