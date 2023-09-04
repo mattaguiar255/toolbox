@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import DefaultHammerImg from "../../images/ComponentSVGs/DefaultHammerSVG";
 import styles from "./Card.module.css";
 
-interface CardProps {
+export interface CardProps {
   img?:               string | React.FunctionComponent<SVGProps<SVGSVGElement>>;
   title?:             string;
   shortDescription?:  string;
