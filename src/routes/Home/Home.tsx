@@ -34,7 +34,7 @@ function Home(): React.ReactElement {
           ))
         }
       </div>
-      <FixedPanel position={{ bottom: "5%", right: "3%" }}>
+      <FixedPanel position={{ bottom: "3%", right: "3%" }}>
         <CreateToolButton nextToolId={nextToolId?.[0].tool_uuid} />
       </FixedPanel>
     </div>

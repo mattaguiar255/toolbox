@@ -1,5 +1,6 @@
 
 #linkEditor {
+  box-sizing: border-box;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -56,12 +57,42 @@
 }
 
 .deleteLinkButton {
-  aspect-ratio: 1/1;
+  width: 1.75em;
+  height: 1.75em;
   color: grey;
   background-color: transparent;
+  display: inline !important;
 }
 
 .deleteLinkButton:hover {
   color: var(--danger-red);
   background-color: var(--soft-red);
+}
+
+@media screen and (max-width: 590px) {
+
+  #linkEditor {
+    width: 100%;
+  }
+
+  .linkFlexbox {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 3em;
+  }
+
+  .linkURLInputContainer {
+    flex-direction: column;
+  }
+
+  .linkNameInput {
+    margin-right: 0;
+  }
+
+  .linkURLInput {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.15em;
+  }
+
 }

@@ -1,6 +1,7 @@
 
 #formHeaderFlex {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: start;
   margin-bottom: 1em;
@@ -11,7 +12,7 @@
 }
 
 #toolTitle {
-  width: 33%;
+  width: 50%;
   font-size: 1.33em;
   font-weight: 700;
 }
@@ -19,7 +20,7 @@
 #toolImage {
   width: 7em;
   height: 7em;
-  margin-right: 1em;
+  margin: 0 1em;
   fill: var(--soft-black);
 }
 
@@ -41,4 +42,16 @@
 
 .inputField {
   width: 100%;
+}
+
+@media screen and (max-width: 590px) {
+  
+  #toolTitle {
+    width: 100%;
+  }
+
+  .labelAndInputContainer {
+    width: 100%;
+  }
+
 }

@@ -18,7 +18,7 @@ function View(): React.ReactElement {
     <div id={styles.view}>
       { tools?.length !== undefined && tools.length > 0 && <ToolForm tool={tools[0]} /> }
       { tools?.length == 0 && <p id={styles.toolSearchFailed}>Could not find the specified tool.</p> }
-      <FixedPanel position={{ bottom: "5%", right: "3%" }}>
+      <FixedPanel position={{ bottom: "3%", right: "3%" }}>
         <DeleteToolButton toolId={tools?.[0]?.tool_uuid} />
       </FixedPanel>
     </div>

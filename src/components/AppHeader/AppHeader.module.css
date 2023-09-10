@@ -1,7 +1,7 @@
 
 #appHeader {
   display: flex;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 #appHeaderLink {
@@ -10,7 +10,7 @@
   text-decoration: none;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
-  font-size: 1.75rem; /* All em based units inside the link will be based off this. */
+  font-size: 1.75em; /* All em based units inside the link will be based off this. */
   color: var(--soft-black);
 }
 
