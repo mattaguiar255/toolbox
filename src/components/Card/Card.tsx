@@ -22,7 +22,17 @@ function Card(props: CardProps): React.ReactElement {
         <div className={styles.cardDetailsContainer}>
           <div className={styles.cardTitle}>{props.title}</div>
           { props.shortDescription && <div className={styles.cardDescription}>{props.shortDescription}</div> }
-          { props.linkURL && <a className={styles.cardLinkURL} href={props.linkURL} target="_blank">{props.linkURL}</a> }
+          { 
+            props.linkURL && 
+            <a 
+              className={styles.cardLinkURL} 
+              href={props.linkURL} 
+              target="_blank"
+              onClick={ (event) => event.stopPropagation() }
+            >
+              {props.linkURL}
+            </a>
+          }
         </div>
       </div>
     </motion.div>
