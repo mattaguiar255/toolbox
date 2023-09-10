@@ -22,14 +22,15 @@ function Home(): React.ReactElement {
     <div>
       <div id={styles.cardFlexbox}>
         { tools !== null && tools.map((tool) => (
-            <CardLink
-              key={tool.tool_uuid}
-              to={`/view/${tool.tool_uuid}`}
-              title={tool.title || "<Title>"}
-              img={tool.icon_link || undefined}
-              shortDescription={tool.short_desc}
-              linkURL={tool.docs_link || undefined} 
-            />
+            <div key={tool.tool_uuid} className={styles.card}>
+              <CardLink
+                to={`/view/${tool.tool_uuid}`}
+                title={tool.title || "<Title>"}
+                img={tool.icon_link || undefined}
+                shortDescription={tool.short_desc}
+                linkURL={tool.docs_link || undefined} 
+              />
+            </div>
           ))
         }
       </div>
