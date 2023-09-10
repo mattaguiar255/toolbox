@@ -1,6 +1,7 @@
 import React, { SVGProps } from "react";
 import { motion } from "framer-motion";
 import DefaultHammerImg from "../../images/ComponentSVGs/DefaultHammerSVG";
+import isMobileDevice from "../../utils/isMobileDevice";
 import styles from "./Card.module.css";
 
 export interface CardProps {
@@ -13,7 +14,7 @@ export interface CardProps {
 function Card(props: CardProps): React.ReactElement {
 
   return (
-    <motion.div className={styles.card} whileHover={{ scale: 1.075 }}>
+    <motion.div className={styles.card} whileHover={{ scale: isMobileDevice() ? 1 : 1.075 }}>
       <div className={styles.cardContentFlexbox}>
         <div className={styles.cardImageContainer}>
           { typeof props.img === "string" && <img className={styles.cardImage} src={props.img} alt="Tool" /> }
